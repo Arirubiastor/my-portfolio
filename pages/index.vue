@@ -1,15 +1,16 @@
 <template>
   <div>
     <TheHeader />
-    <GitHubRepos
-      :repositoriesData="repos"
-      :bgColorsData="colors"
-    />
+    <GitHubRepos :repositoriesData="repos" :bgColorsData="colors" />
+    <MediumPosts :posts="mediumPosts" />
+    <br />
+    {{ postsCategories }}
   </div>
 </template>
 
 <script>
 import GitHubRepos from "~/components/GitHubRepos.vue";
+import MediumPosts from "~/components/MediumPosts.vue";
 import axios from "axios";
 
 export default {
@@ -17,10 +18,14 @@ export default {
     return {
       repos: [],
       colors: {},
+      mediumPosts: [],
+      posts: [],
+      postsCategories: [],
     };
   },
   components: {
     GitHubRepos,
+    MediumPosts,
   },
   methods: {
     getColors() {
@@ -42,10 +47,24 @@ export default {
             .slice(0, 6);
         });
     },
+    getPosts() {
+      fetch(
+        "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@arianarubigo"
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          this.mediumPosts = data.items; // Array with the content, without feed and details info
+          // console.log(data);
+          
+          // this.posts = res.filter(item => item.categories.length > 0)
+        });
+    },
   },
+
   async mounted() {
     await this.getColors();
     this.getRepos();
+    this.getPosts();
   },
 };
 </script>

@@ -3,7 +3,8 @@ $primary:       #7D61C8 ;
 $secondary:     #ffffff ;
 $light:         #f1f1f1 ;
 $dark:          #000000 ;
-$transparent: transparent;
+$transparent:   transparent;
+$light-gray:    #adb1b4 ;
 //then bootstrap & bootstrap-vue should be added after 
 //so that they inherit the custom SCSS variables
 @import 'bootstrap/scss/bootstrap.scss';
