@@ -27,6 +27,9 @@ export default {
     GitHubRepos,
     MediumPosts,
   },
+//   mounted() {
+//     console.log(process.env.TEST_VARIABLE)
+// },
   methods: {
     getColors() {
       axios
@@ -65,6 +68,7 @@ export default {
     await this.getColors();
     this.getRepos();
     this.getPosts();
+    console.log(process.env.TEST_VARIABLE)
   },
 };
 </script>
