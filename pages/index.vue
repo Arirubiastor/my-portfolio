@@ -65,11 +65,11 @@ export default {
     },
     linkedInProfile() {
       // axios
-      //   .get("https://api.linkedin.com/v2/me?access_token=AQWSMRLu7gi2UWjqwp5--aUNruU7B2GGXz0AVjGmweBxndXIwckLoXG29igkDMUtrTuDuV0knY4aTzSrCnfcM4NL0L0ETuRk6oHIGc81iVbCLKd8_wEz__qd5LujllvRqx-Y0zeaGS0JORHC4XEiAD6ryTo1R9CXB_qwktuAp6lEg70NTJqwPdYF78P6YnAhaP0JyUxiNk1KQFK45fdpEwEQwxixbvg3v4EycaLP9yBLSRinBtBQKA5fMFUrDywUEXNXvYQFlm9DVrto289HrG3ltH7RFHL7HJAo2e-h5fgV6ziY3GJt0L7JYtuRFQfy9BrvIxAmH7bou765suZe0T4ApN9XDg")
+      //   .get("https://api.linkedin.com/v2/me?access_token=LINKEDIN_ACCESS_TOKEN")
       //   .then((res) => (this.linkedInProfile = res.data));
 
       // fetch(
-      //   "https://api.linkedin.com/v2/me?access_token=AQWSMRLu7gi2UWjqwp5--aUNruU7B2GGXz0AVjGmweBxndXIwckLoXG29igkDMUtrTuDuV0knY4aTzSrCnfcM4NL0L0ETuRk6oHIGc81iVbCLKd8_wEz__qd5LujllvRqx-Y0zeaGS0JORHC4XEiAD6ryTo1R9CXB_qwktuAp6lEg70NTJqwPdYF78P6YnAhaP0JyUxiNk1KQFK45fdpEwEQwxixbvg3v4EycaLP9yBLSRinBtBQKA5fMFUrDywUEXNXvYQFlm9DVrto289HrG3ltH7RFHL7HJAo2e-h5fgV6ziY3GJt0L7JYtuRFQfy9BrvIxAmH7bou765suZe0T4ApN9XDg"
+      //   "https://api.linkedin.com/v2/me?access_token=LINKEDIN_ACCESS_TOKEN"
       // )
       //   .then((res) => res.json())
       //   .then((data) => {
