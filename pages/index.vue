@@ -3,7 +3,11 @@
     <TheHeader />
     <GitHubRepos :repositoriesData="repos" :bgColorsData="colors" />
     <MediumPosts :posts="mediumPosts" />
-    {{ linkedInProfile }}
+    <!-- {{ linkedInProfile }}<hr> -->
+    <InstagramMedia />
+    {{ instagramCollectionList }}
+    {{ instagramMediaItem }}
+    <b-img :src="instagramMediaItem.media_url"></b-img>
     <br />
     {{ postsCategories }}
 
@@ -32,6 +36,7 @@ export default {
       mediumPosts: [],
       posts: [],
       postsCategories: [],
+      // instagramCollectionList: [],
     };
   },
   components: {
@@ -83,13 +88,29 @@ export default {
       //     this.linkedInProfile = data;
       //   });
     },
+    // Consulta el perímetro de elementos multimedia del usuario
+    instagramMediaCollection() {
+      const accessToken = process.env.INSTAGRAM_DISPLAY_API_ACCESS_TOKEN;
+      axios
+        .get("https://graph.instagram.com/me/media?fields=id,caption&access_token=" + accessToken)
+        .then((res) => (this.instagramCollectionList = res.data));
+    },
+    instagramMediaItem() {
+      const mediaTestId = 17890589443777752;
+      // ${mediaTestId}
+      axios
+        .get(`https://graph.instagram.com/17890589443777752?fields=id,media_type,media_url,username,timestamp&access_token=` + process.env.INSTAGRAM_DISPLAY_API_ACCESS_TOKEN)
+        .then((res) => (this.instagramMediaItem = res.data));
+    }
   },
 
   async mounted() {
     await this.getColors();
     this.getRepos();
     this.getPosts();
-    this.linkedInProfile();
+    // this.linkedInProfile();
+    this.instagramMediaCollection();
+    this.instagramMediaItem();
   },
 };
 </script>
