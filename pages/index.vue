@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="background-color: #e9d6d6;">
     <TheHeader />
     <GitHubRepos :repositoriesData="repos" :bgColorsData="colors" />
     <MediumPosts :posts="mediumPosts" />
@@ -16,6 +16,13 @@
 import GitHubRepos from "~/components/GitHubRepos.vue";
 import MediumPosts from "~/components/MediumPosts.vue";
 import axios from "axios";
+
+import Vue from 'vue'
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
+
+Vue.use(BootstrapVue)
+Vue.use(BootstrapVueIcons)
+
 
 export default {
   data() {
