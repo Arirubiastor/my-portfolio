@@ -4,15 +4,13 @@
     <GitHubRepos :repositoriesData="repos" :bgColorsData="colors" />
     <MediumPosts :posts="mediumPosts" />
     <!-- {{ linkedInProfile }}<hr> -->
-    <InstagramMedia />
-    {{ instagramCollectionList }}
-    {{ instagramMediaItem }}
+    <InstagramMedia :collection="igCollectionList.data" />
+    <!-- {{ igCollectionList }} -->
+    <hr>
+    <!-- {{ igMediaItem }} -->
     <b-img :src="instagramMediaItem.media_url"></b-img>
     <br />
     {{ postsCategories }}
-
-    <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
-    <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="es_ES" data-type="vertical" data-theme="light" data-vanity="ariana-rubi"><a class="LI-simple-link" href='https://de.linkedin.com/in/ariana-rubi?trk=profile-badge'>Ariana Rubí</a></div>
   </div>
 </template>
 
@@ -36,7 +34,9 @@ export default {
       mediumPosts: [],
       posts: [],
       postsCategories: [],
-      // instagramCollectionList: [],
+      igCollectionList: this.igCollectionList,
+      igMediaItem: {},
+
     };
   },
   components: {
@@ -90,17 +90,27 @@ export default {
     },
     // Consulta el perímetro de elementos multimedia del usuario
     instagramMediaCollection() {
-      const accessToken = process.env.INSTAGRAM_DISPLAY_API_ACCESS_TOKEN;
+      const accessToken = process.env.IG_API_LONG_LIVED_ACCESS_TOKEN;
       axios
         .get("https://graph.instagram.com/me/media?fields=id,caption&access_token=" + accessToken)
-        .then((res) => (this.instagramCollectionList = res.data));
+        .then((res) => (this.igCollectionList = res.data))
+        // console.log(this.igCollectionList)
+        .catch(error => {
+          this.errorMessage = error.message;
+          console.log('There was an error with IG collection request', error);
+        });
+          
     },
     instagramMediaItem() {
+      // var i;
+      // for (let i = 0; i < igCollectionList.data.length; i++) {
+      //   var test = igCollectionList.data[i];
+      // }
       const mediaTestId = 17890589443777752;
       // ${mediaTestId}
       axios
-        .get(`https://graph.instagram.com/17890589443777752?fields=id,media_type,media_url,username,timestamp&access_token=` + process.env.INSTAGRAM_DISPLAY_API_ACCESS_TOKEN)
-        .then((res) => (this.instagramMediaItem = res.data));
+        .get(`https://graph.instagram.com/${mediaTestId}?fields=id,media_type,media_url,username,timestamp&access_token=` + process.env.IG_API_LONG_LIVED_ACCESS_TOKEN)
+        .then((res) => (this.igMediaItem = res.data));
     }
   },
 
@@ -113,7 +123,12 @@ export default {
     this.instagramMediaItem();
   },
 };
+
+
+// Actualizar token c/2 meses aquí: https://developers.facebook.com/docs/instagram-basic-display-api/guides/long-lived-access-tokens
 </script>
 
 <style lang="scss">
 </style>
+
+

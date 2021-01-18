@@ -1,21 +1,24 @@
 <template>
-<div>
-    Insta title!
-    <InstagramMediaItem />
-</div>
-  
+  <div class="container">
+    <h2>Instagram posts</h2>
+    <InstagramMediaItem :collection="collection" />
+  </div>
 </template>
 
 <script>
-import InstagramMediaItem from '~/components/InstagramMediaItem.vue'
+import InstagramMediaItem from "~/components/InstagramMediaItem.vue";
 export default {
-    components: {
-        InstagramMediaItem,
-    }
-
-}
+  props: {
+    collection: {
+      type: Array,
+      required: true,
+    },
+  },
+  components: {
+    InstagramMediaItem,
+  },
+};
 </script>
 
-<style>
-
+<style lang="scss">
 </style>
