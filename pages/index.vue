@@ -4,11 +4,11 @@
     <GitHubRepos :repositoriesData="repos" :bgColorsData="colors" />
     <MediumPosts :posts="mediumPosts" />
     <!-- {{ linkedInProfile }}<hr> -->
-    <InstagramMedia :collection="igCollectionList.data" />
+    <InstagramMedia :collection="igCollectionList" />
     <!-- {{ igCollectionList }} -->
     <hr>
-    <!-- {{ igMediaItem }} -->
-    <b-img :src="instagramMediaItem.media_url"></b-img>
+    {{ igMediaItem }}{{ igMediaItem.media_url }}
+    <b-img :src="igMediaItem.media_url"></b-img>
     <br />
     {{ postsCategories }}
   </div>
@@ -93,7 +93,7 @@ export default {
       const accessToken = process.env.IG_API_LONG_LIVED_ACCESS_TOKEN;
       axios
         .get("https://graph.instagram.com/me/media?fields=id,caption&access_token=" + accessToken)
-        .then((res) => (this.igCollectionList = res.data))
+        .then(res => this.igCollectionList = res.data.data)
         // console.log(this.igCollectionList)
         .catch(error => {
           this.errorMessage = error.message;
@@ -103,8 +103,8 @@ export default {
     },
     instagramMediaItem() {
       // var i;
-      // for (let i = 0; i < igCollectionList.data.length; i++) {
-      //   var test = igCollectionList.data[i];
+      // for (let i = 0; i < igCollectionList.length; i++) {
+      //   var test = this.igCollectionList[i];
       // }
       const mediaTestId = 17890589443777752;
       // ${mediaTestId}
