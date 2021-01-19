@@ -1,6 +1,5 @@
 <template>
   <div style="background-color: #e9d6d6">
-    <TheHeader />
     <GitHubRepos :repositoriesData="repos" :bgColorsData="colors" />
     <MediumPosts :posts="mediumPosts" />
     {{ linkedInProfile }}
@@ -74,19 +73,23 @@ export default {
         });
     },
     linkedInProfile() {
-      axios
-        .get(
-          "https://api.linkedin.com/v2/me?access_token=LINKEDIN_ACCESS_TOKEN"
-        )
-        .then((res) => (this.linkedInProfile = res.data));
-
-      // fetch(
-      //   "https://api.linkedin.com/v2/me?access_token=LINKEDIN_ACCESS_TOKEN"
-      // )
-      //   .then((res) => res.json())
-      //   .then((data) => {
-      //     this.linkedInProfile = data;
+      // axios
+      //   .get(
+      //     "https://api.linkedin.com/v2/me?access_token=" + process.env.LINKEDIN_ACCESS_TOKEN
+      //   )
+      //   .then(res => this.linkedInProfile = res.data)
+      //   .catch((error) => {
+      //     this.errorMessage = error.message;
+      //     console.log("There was an error with linkedin get request", error);
       //   });
+
+      fetch(
+        "https://api.linkedin.com/v2/me?access_token=" + process.env.LINKEDIN_ACCESS_TOKEN
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          this.linkedInProfile = data;
+        });
     },
     // Consulta el perímetro de elementos multimedia del usuario
     instagramMediaCollection() {
