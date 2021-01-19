@@ -1,9 +1,21 @@
 // All of your custom SCSS variables go first
 $primary:       #7D61C8 ;
-$secondary:     #ffffff ;
+$secondary:     #e9d6d6 ;
 $light:         #f1f1f1 ;
 $dark:          #000000 ;
-$transparent: transparent;
+$transparent:   transparent;
+$light-gray:    #adb1b4 ;
+
+$background:  #fac7dc ;
+
+
+
+//Nabvar
+
+$navbar-padding-y:                  1.2rem !default;
+$navbar-padding-x:                  2.5rem !default;
+
+
 //then bootstrap & bootstrap-vue should be added after 
 //so that they inherit the custom SCSS variables
 @import 'bootstrap/scss/bootstrap.scss';
