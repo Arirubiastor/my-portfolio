@@ -1,19 +1,18 @@
 <template>
-  <div class="container">
-    <h2>Instagram posts</h2>
-
-    <!-- <b-row>
+  <b-container>
+    <b-row>
       <b-col
         cols="12"
         sm="4"
         class="my-1"
         :key="index"
-        v-for="(item, index) in collection.slice(
+        v-for="(item, index) in repositoriesData.slice(
           (currentPage - 1) * perPage,
           (currentPage - 1) * perPage + perPage
         )"
       >
-        <b-card :header="item.caption" class="text-center">
+        <b-card :header="item.name" class="text-center">
+          <p class="card-text">{{ item.description }}</p>
         </b-card>
       </b-col>
     </b-row>
@@ -21,25 +20,21 @@
     <b-row>
       <b-col md="6" class="my-1">
         <b-pagination
-          :total-rows="collection.length"
+          :total-rows="repositoriesData.length"
           :per-page="perPage"
           v-model="currentPage"
           class="my-0"
         >
         </b-pagination>
       </b-col>
-    </b-row> -->
-  </div>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
-import InstagramMediaItem from "~/components/InstagramMediaItem.vue";
 export default {
-  components: {
-    InstagramMediaItem,
-  },
   props: {
-    collection: {
+    repositoriesData: {
       type: Array,
       required: true,
     },
@@ -48,15 +43,15 @@ export default {
     return {
       loaded: false, // Prevent displaying component until data loaded
 
-      items: this.collection,
-      paginatedItems: this.collection,
+      items: this.repositoriesData,
+      paginatedItems: this.repositoriesData,
       currentPage: 1,
       perPage: 1,
-      IGcollection: [],
+      repositoriesList: [],
     };
   },
   mounted() {
-    this.IGcollection = this.collection;
+    this.repositoriesList = this.repositoriesData;
   },
 };
 </script>

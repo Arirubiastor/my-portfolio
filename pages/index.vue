@@ -1,12 +1,12 @@
 <template>
   <div style="background-color: #e9d6d6">
-    <GitHubRepos :repositoriesData="repos" :bgColorsData="colors" />
-    <MediumPosts :posts="mediumPosts" />
-    {{ linkedInProfile }}
-    <hr />
-    <InstagramMedia :collection="igCollectionList" />
+    <MainCatalogue :collectionList="igCollectionList" :repositoriesData="repos" :bgColorsData="colors" :posts="mediumPosts" />
+    <!-- <GitHubRepos :repositoriesData="repos" :bgColorsData="colors" /> -->
+    <!-- <MediumPosts :posts="mediumPosts" /> -->
+    <!-- <InstagramMedia :collection="igCollectionList" /> -->
+
+    <!-- {{ linkedInProfile }} -->
     <!-- {{ igCollectionList }} -->
-    <br />
     <!-- {{ postsCategories }} -->
   </div>
 </template>
