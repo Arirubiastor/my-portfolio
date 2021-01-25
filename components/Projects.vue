@@ -37,7 +37,7 @@
 
         <header class="mt-auto text-center">
           <h2 class="title__section font-effect-outline text-lg mb-0">
-            Profile
+            Projects
           </h2>
         </header>
       </b-col>
