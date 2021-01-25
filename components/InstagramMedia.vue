@@ -75,12 +75,10 @@
         <b-card
           class="elements__pagination card_description align-self-center m-auto p-0"
         >
-          <h5 class="text-center text-uppercase mb-4">Section Descrption</h5>
+          <h5 class="text-center text-uppercase mb-4">Instagram Posts</h5>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit iusto
-            a laboriosam nemo quo perferendis beatae autem. Facilis odio, ab
-            commodi doloribus repudiandae maxime quod distinctio, velit quam non
-            nulla?
+            In this section all my posts will be displayed one by one using the pagination below.<br>
+            (Waiting for the application review)<b-spinner variant="primary" label="Spinning" class="ml-3"></b-spinner>
           </p>
         </b-card>
         <b-pagination

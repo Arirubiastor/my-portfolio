@@ -76,7 +76,7 @@
               </b-icon>
               <div class="w-100 mt-auto">
                 <h5 class="tab-title mt-auto text-center m-0">
-                  Instagram posts
+                  Artwork
                 </h5>
               </div>
             </div>
@@ -177,9 +177,9 @@ export default {
       border-radius: 0;
       padding: 0;
     }
-    .nav-link.active {
-      color: #343a40; // gray-800
-    }
+    // .nav-link.active {
+    //   color: #343a40; // gray-800
+    // }
   }
 }
 </style>
