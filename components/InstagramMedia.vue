@@ -14,7 +14,7 @@
             <TheHeader />
         </div>
 
-        <b-card
+        <b-card v-if="collection && collection.length > 0"
           class="instagram__card align-self-center m-auto"
           :img-src="IGpost.media_url"
           img-alt="Instagram image"
@@ -22,6 +22,34 @@
         >
           {{ IGpost.caption }}
         </b-card>
+
+        <div v-else>
+          <b-card
+          class="instagram__card align-self-center m-auto"
+          :img-src="IGpost.media_url"
+          img-alt="Instagram image"
+          img-top
+        >
+          Instagram post
+        </b-card>
+        <b-card
+          class="instagram__card align-self-center m-auto"
+          :img-src="IGpost.media_url"
+          img-alt="Instagram image"
+          img-top
+        >
+          Instagram post
+        </b-card>
+        <b-card
+          class="instagram__card align-self-center m-auto"
+          :img-src="IGpost.media_url"
+          img-alt="Instagram image"
+          img-top
+        >
+          Instagram post
+        </b-card>
+        </div>
+        
 
         <header class="mt-auto text-center">
           <h2 class="ig-title__section font-effect-outline text-lg mb-0">
