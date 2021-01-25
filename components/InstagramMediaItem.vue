@@ -6,7 +6,6 @@
         {{ collectionItem.id }}<br />{{ collectionItem.caption }}
       </b-card>
     </b-card-group>
-    <!-- {{ collection }} -->
   </div>
 </template>
 
