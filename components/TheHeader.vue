@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <b-navbar toggleable="lg" variant="transparent">
+  <div class="the-header ml-5 d-flex flex-column justify-content-center">
+    <!-- <b-navbar toggleable="lg" variant="transparent">
       <b-navbar-brand href="#">Ariana Rubí</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
@@ -19,7 +19,6 @@
           >
         </b-navbar-nav>
 
-        <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-nav-form>
             <b-form-input
@@ -31,20 +30,27 @@
               >Search</b-button
             >
           </b-nav-form>
-
-          <!-- <b-nav-item-dropdown text="Lang" right>
-          <b-dropdown-item href="#">EN</b-dropdown-item>
-          <b-dropdown-item href="#">ES</b-dropdown-item>
-        </b-nav-item-dropdown> -->
         </b-navbar-nav>
       </b-collapse>
-    </b-navbar>
+    </b-navbar> -->
+    <b-navbar-brand>Ariana Rubí</b-navbar-brand>
+    <h5>Frontend Developer &amp; Visual Artist</h5>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+
+};
 </script>
 
-<style>
+<style lang="scss">
+.the-header {
+  height: 100%;
+  margin-top: auto;
+  h5 {
+    font-size: 1rem;
+    font-weight: 100;
+  }
+}
 </style>

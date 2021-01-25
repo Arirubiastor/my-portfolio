@@ -36,7 +36,9 @@
               (currentPage - 1) * perPage + perPage
             )"
           >
-          <div class="empty-space-section-content p-0">Frontend Developer &amp; Visual Artist</div>
+          <div class="empty-space-section-content p-0">
+            <TheHeader />
+          </div>
             <b-card class="repository__card align-self-center m-auto">
               <b-card-title>
                 <svg
@@ -94,7 +96,7 @@
               </div>
             </b-card>
             
-        <header class="pt-4 mt-auto text-center">
+        <header class="mt-auto text-center">
           <h2 class="title__section font-effect-outline text-lg mb-0">Github</h2>
         </header>
           </b-col>
@@ -107,7 +109,8 @@
           <div class="empty-space p-0"></div>
           <!-- <b-card class="elements__pagination d-flex flex-row"> -->
             <div class="elements__pagination d-flex flex-row w-100 mx-auto">
-                <h1 class="current-page__pagination d-inline mr-auto nb-0">0{{ currentPage }}</h1>
+                <h1 v-if="currentPage < 10" class="current-page__pagination d-inline mr-auto nb-0">0{{ currentPage }}</h1>
+                <h1 v-else class="current-page__pagination d-inline mr-auto nb-0">0{{ currentPage }}</h1>
                 <h5 class="d-inline align-self-end pb-4">/{{ repositoriesData.length }}</h5>
             </div>
           <!-- </b-card> -->
@@ -219,7 +222,7 @@ export default {
 
 .pagination__container,
 .section__container {
-  height: calc(100vh - 5.1rem);
+  height: calc(100vh - 0.6rem);
   // border: solid 1px blue;
 
   h1 {

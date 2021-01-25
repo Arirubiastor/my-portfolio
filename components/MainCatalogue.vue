@@ -28,7 +28,7 @@
             :bgColorsData="bgColorsData"
           />
         </b-tab>
-        <b-tab>
+        <b-tab class="pt-0 pb-0">
           <template #title>
             <div class="d-flex flex-column align-items-center w-100">
               <b-icon
@@ -44,12 +44,9 @@
             </div>
           </template>
           <!-- <b-card-text>Instagram posts</b-card-text> -->
-          <Profile
-            :repositoriesData="repositoriesData"
-            :bgColorsData="bgColorsData"
-          />
+          <Projects />
         </b-tab>
-        <b-tab>
+        <b-tab class="pt-0 pb-0">
           <template #title>
             <div class="d-flex flex-column align-items-center w-100">
               <b-icon
@@ -67,7 +64,7 @@
           <!-- <b-card-text>Instagram posts</b-card-text> -->
           <MediumPosts :posts="posts" />
         </b-tab>
-        <b-tab class="overflow-hidden">
+        <b-tab  class="pt-0 pb-0">
           <template #title>
             <div class="d-flex flex-column align-items-center w-100">
               <b-icon
@@ -87,7 +84,7 @@
           <!-- <b-card-text>Instagram posts</b-card-text> -->
           <InstagramMedia :collection="collectionList" />
         </b-tab>
-        <b-tab>
+        <b-tab class="pt-0 pb-0">
           <template #title>
             <div class="d-flex flex-column align-items-center w-100">
               <b-icon

@@ -30,10 +30,89 @@ export default {
       mediumPosts: [],
       posts: [],
       postsCategories: [],
-      igCollectionList: this.igCollectionList,
+      // igCollectionList: this.igCollectionList,
+      igCollectionList: [],
       igMediaItem: {},
       igMediaList: this.igMediaList,
       testList: [],
+
+      // ProfileData: [
+      //   {
+      //     itemTitle: 'Main Data',
+      //     itemContent: {
+      //       personalData: [
+      //         { name: 'Ariana Rubí' },
+      //         { photo: 'some image' },
+      //         { title: 'Frontend Developer & Visual Artist' },
+      //         { about: 'about...' },
+      //       ],
+      //     },
+      //   },
+      //   {
+      //     itemTitle: 'Skills',
+      //     itemContent: {
+      //       skills: [
+      //         { technologies: ['HTML', 'CSS/SASS', 'JavaScript', 'Node.js'] },
+      //         { frameworks: ['Vue.js', 'Nuxt.js'] },
+      //         {
+      //           more: [
+      //             'REST APIs',
+      //             'Instagram API',
+      //             'Heroku',
+      //             'Bootstrap',
+      //             'Storyblok',
+      //             'Content Management Systems (CMS)',
+      //             'WordPress',
+      //             'Amazon Web Services (AWS)',
+      //             'JAMstack',
+      //             'Amazon S3',
+      //             'Git',
+      //             'GitHub',
+      //             'GitLab',
+      //             'Adobe Photoshop',
+      //             'Adobe Illustrator',
+      //           ],
+      //         },
+      //       ],
+      //     },
+      //   },
+      //   {
+      //     itemTitle: 'Contact',
+      //     itemContent: {
+      //       contact: [
+      //         { phone: '+49 152 52652146' },
+      //         { email: 'arianarubigo@gmail.com' },
+      //         { linkedinUrl: 'www.linkedin.com/in/ariana-rubi' },
+      //       ],
+      //     },
+      //   },
+      //   {
+      //     itemTitle: 'Education',
+      //     itemContent: {
+      //       education: [
+      //         { school: 'Universidad de las Américas Puebla' },
+      //         { degree: 'Licenciatura en Artes Plásticas' },
+      //         { date: '2012-2016' },
+      //       ],
+      //     },
+      //   },
+      //   {
+      //     itemTitle: 'Experience',
+      //     itemContent: {
+      //       experience: [
+      //         { title: '' },
+      //         { employmentType: '' },
+      //         { company: '' },
+      //         { Location: '' },
+      //         { date: '' },
+      //         { headline: '' },
+      //         { description: '' },
+      //       ],
+      //     },
+      //   },
+      //   { languages: ['English', 'German', 'Spanish (Mothertongue)'] },
+      // ],
+
     };
   },
   components: {
