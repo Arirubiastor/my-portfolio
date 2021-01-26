@@ -21,10 +21,9 @@
             <TheHeader />
           </div>
 
-        <a :href="post.link" target="blank">
+        <a :href="post.link" target="blank" class="post__card align-self-center m-auto">
           <!-- <b-card> -->
           <b-card
-            class="post__card align-self-center m-auto"
             :img-src="post.thumbnail"
             img-alt="Post Image"
             img-top
@@ -33,7 +32,7 @@
             <b-card-title>
               {{ post.title }}
             </b-card-title>
-            <b-card-sub-title>
+            <b-card-sub-title class="mb-1">
               <!-- {{ post.author }} -->
               {{ post.pubDate }}
             </b-card-sub-title>
@@ -136,14 +135,22 @@ export default {
 </script>
 
 <style lang="scss">
+$gray-800: #343a40 !default; // text
 
 .post__card {
   width: 15rem;
   max-width: 40rem;
+  color: $gray-800;
+}
+.post__card:hover {
+  text-decoration: none;
+  color: $gray-800;
 }
 
 .medium-title__section {
   font-size: 9rem;
-  font-weight: 900;
+  // font-weight: 900;
+  font-family: 'Inter', 'Source Sans Pro';
+  // font-family: 'Bungee Hairline', 'Source Sans Pro';
 }
 </style>

@@ -159,7 +159,7 @@ export default {
 }
 
 .col-auto {
-  width: 20rem;
+  width: 12rem;
   // max-width: 100%;
 
   .card-header {
@@ -180,6 +180,17 @@ export default {
     // .nav-link.active {
     //   color: #343a40; // gray-800
     // }
+  }
+}
+// Mobile first Responsive design
+@media (min-width: 960px) {
+  .col-auto {
+    width: 15rem;
+  }
+}
+@media (min-width: 1140px) {
+  .col-auto {
+    width: 20rem;
   }
 }
 </style>

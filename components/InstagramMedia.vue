@@ -128,6 +128,8 @@ export default {
 }
 .ig-title__section {
   font-size: 7rem;
-  font-weight: 900;
+  // font-weight: 900;
+  font-family: 'Inter', 'Source Sans Pro';
+  // font-family: 'Bungee Hairline', 'Source Sans Pro';
 }
 </style>

@@ -1,10 +1,10 @@
 <template>
   <!-- <b-container class="container pagination"> -->
-    <div
-      v-if="repositoriesData && repositoriesData.length > 0"
-      class="flex flex-wrap p-0"
-    >
-      <!-- <div
+  <div
+    v-if="repositoriesData && repositoriesData.length > 0"
+    class="flex flex-wrap p-0"
+  >
+    <!-- <div
         v-for="repo in repositoriesData"
         :key="repo.id"
         class="w-full md:w-1/2 lg:w-1/3 md:pr-6 pb-4"
@@ -17,124 +17,129 @@
         />
       </div> -->
 
-      <!-- instead of pagination -->
-      <!-- <b-card-group columns>
+    <!-- instead of pagination -->
+    <!-- <b-card-group columns>
       <GitHubReposItem
         :repositories="repositoriesData"
         :bg-color="bgColorsData"
       />
       </b-card-group> -->
 
-      <b-container fluid class="p-0">
-        <b-row>
-          <b-col
-            cols="8"
-            class="section__container  d-flex flex-column p-0"
-            :key="index"
-            v-for="(repository, index) in repositoriesData.slice(
-              (currentPage - 1) * perPage,
-              (currentPage - 1) * perPage + perPage
-            )"
-          >
+    <b-container fluid class="p-0">
+      <b-row>
+        <b-col
+          cols="8"
+          class="section__container d-flex flex-column p-0"
+          :key="index"
+          v-for="(repository, index) in repositoriesData.slice(
+            (currentPage - 1) * perPage,
+            (currentPage - 1) * perPage + perPage
+          )"
+        >
           <div class="empty-space-section-content p-0">
             <TheHeader />
           </div>
-            <b-card class="repository__card align-self-center m-auto">
-              <b-card-title>
-                <svg
-                  viewBox="0 0 16 16"
-                  class=" fill-current"
-                  aria-hidden="true"
-                >
-                  <path fill-rule="evenodd" :d="icon.book"></path>
-                </svg>
-                {{ repository.name }}
-              </b-card-title>
-              <b-card-text>
-                {{ repository.description }}
-              </b-card-text>
-              <div v-if="repository.language">
-                <b-card-text class="d-inline mr-2">
-                  <!-- <b-img class="language-color" alt="Language color"
+          <b-card class="repository__card align-self-center m-auto">
+            <b-card-title>
+              <svg viewBox="0 0 16 16" class="fill-current" aria-hidden="true">
+                <path fill-rule="evenodd" :d="icon.book"></path>
+              </svg>
+              {{ repository.name }}
+            </b-card-title>
+            <b-card-text>
+              {{ repository.description }}
+            </b-card-text>
+            <div v-if="repository.language">
+              <b-card-text class="d-inline mr-2">
+                <!-- <b-img class="language-color" alt="Language color"
               v-bind="mainProps"
               :blank-color=" repository.language ? bgColor : '' "
               rounded="circle"
             >
             </b-img> -->
-                  <b-img
-                    class="language-color"
-                    alt="Language color"
-                    v-bind="mainProps"
-                    :blank-color="bgColorsData.Vue.color"
-                    rounded="circle"
-                  >
-                  </b-img>
-                  {{ repository.language }}
-                </b-card-text>
-                <b-card-text class="d-inline mr-2">
-                  <svg
-                    class="fill-current mr-1"
-                    aria-label="stars"
-                    viewBox="0 0 16 16"
-                    role="img"
-                  >
-                    <path fill-rule="evenodd" :d="icon.star"></path>
-                  </svg>
-                  {{ repository.stargazers_count }}
-                </b-card-text>
-                <b-card-text class="d-inline mr-2">
-                  <svg
-                    class="fill-current mr-1"
-                    aria-label="fork"
-                    viewBox="0 0 16 16"
-                    role="img"
-                  >
-                    <path fill-rule="evenodd" :d="icon.fork"></path>
-                  </svg>
-                  {{ repository.forks }}
-                </b-card-text>
-              </div>
-            </b-card>
-            
-        <header class="mt-auto text-center">
-          <h2 class="title__section font-effect-outline text-lg mb-0">Github</h2>
-        </header>
-          </b-col>
+                <b-img
+                  class="language-color"
+                  alt="Language color"
+                  v-bind="mainProps"
+                  :blank-color="bgColorsData.Vue.color"
+                  rounded="circle"
+                >
+                </b-img>
+                {{ repository.language }}
+              </b-card-text>
+              <b-card-text class="d-inline mr-2">
+                <svg
+                  class="fill-current mr-1"
+                  aria-label="stars"
+                  viewBox="0 0 16 16"
+                  role="img"
+                >
+                  <path fill-rule="evenodd" :d="icon.star"></path>
+                </svg>
+                {{ repository.stargazers_count }}
+              </b-card-text>
+              <b-card-text class="d-inline mr-2">
+                <svg
+                  class="fill-current mr-1"
+                  aria-label="fork"
+                  viewBox="0 0 16 16"
+                  role="img"
+                >
+                  <path fill-rule="evenodd" :d="icon.fork"></path>
+                </svg>
+                {{ repository.forks }}
+              </b-card-text>
+            </div>
+          </b-card>
 
-<!-- justify-content-center align-items-end border border-primary -->
-          <b-col
-            cols="4"
-            class="pagination__container d-flex flex-column px-5"
-          >
+          <header class="mt-auto text-center">
+            <h2 class="title__section text-lg mb-0">Github</h2>
+          </header>
+        </b-col>
+
+        <!-- justify-content-center align-items-end border border-primary -->
+        <b-col cols="4" class="pagination__container d-flex flex-column px-1 px-md-4 px-lg-5">
           <div class="empty-space p-0"></div>
           <!-- <b-card class="elements__pagination d-flex flex-row"> -->
-            <div class="elements__pagination d-flex flex-row w-100 mx-auto">
-                <h1 v-if="currentPage < 10" class="current-page__pagination d-inline mr-auto nb-0">0{{ currentPage }}</h1>
-                <h1 v-else class="current-page__pagination d-inline mr-auto nb-0">0{{ currentPage }}</h1>
-                <h5 class="d-inline align-self-end pb-4">/{{ repositoriesData.length }}</h5>
-            </div>
-          <!-- </b-card> -->
-            
-            <b-card class="elements__pagination card_description align-self-center m-auto p-0">
-              <h5 class="text-center text-uppercase mb-4">Section Descrption</h5>
-              <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit
-                iusto a laboriosam nemo quo perferendis beatae autem. Facilis
-                odio, ab commodi doloribus repudiandae maxime quod distinctio,
-                velit quam non nulla?
-              </p>
-            </b-card>
-            <b-pagination pills
-              :total-rows="repositoriesData.length"
-              :per-page="perPage"
-              v-model="currentPage"
-              class="align-self-center mt-auto my-0 mb-4"
+          <div class="elements__pagination d-flex flex-row w-100 mx-auto">
+            <h1
+              v-if="currentPage < 10"
+              class="current-page__pagination d-inline mr-auto nb-0"
             >
-            </b-pagination>
-          </b-col>
-        </b-row>
+              0{{ currentPage }}
+            </h1>
+            <h1 v-else class="current-page__pagination d-inline mr-auto nb-0">
+              0{{ currentPage }}
+            </h1>
+            <h5 class="d-inline align-self-end pb-4">
+              /{{ repositoriesData.length }}
+            </h5>
+          </div>
+          <!-- </b-card> -->
 
-        <!-- <b-row>
+          <b-card
+            class="elements__pagination card_description align-self-center m-auto p-0"
+          >
+            <h5 class="text-center text-uppercase mb-4">Section Descrption</h5>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit
+              iusto a laboriosam nemo quo perferendis beatae autem. Facilis
+              odio, ab commodi doloribus repudiandae maxime quod distinctio,
+              velit quam non nulla?
+            </p>
+          </b-card>
+          <b-pagination
+            pills
+            :total-rows="repositoriesData.length"
+            :per-page="perPage"
+            v-model="currentPage"
+            class="align-self-center mt-auto my-0 mb-4"
+          >
+          </b-pagination>
+        </b-col>
+      </b-row>
+
+      <!-- <b-row>
           <b-col md="6" class="my-1">
             <b-pagination
               :total-rows="repositoriesData.length"
@@ -145,9 +150,9 @@
             </b-pagination>
           </b-col>
         </b-row> -->
-      </b-container>
-    </div>
-    <!-- </b-container> -->
+    </b-container>
+  </div>
+  <!-- </b-container> -->
 </template>
 
 <script>
@@ -241,8 +246,17 @@ export default {
 }
 
 .title__section {
-  font-size: 10rem;
-  font-weight: 900;
+  font-family: "Inter", "Source Sans Pro";
+  // font-family: 'Bungee Hairline', 'Source Sans Pro';
+  font-size: 8rem;
+  // font-weight: 900;
+  position: relative;
 }
 
+// Mobile first Responsive design
+@media (min-width: 960px) {
+  .title__section {
+    font-size: 10rem;
+  }
+}
 </style>
