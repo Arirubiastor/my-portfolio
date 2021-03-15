@@ -4,6 +4,7 @@ $primary:        #711E47;
 // $secondary:     #e9d6d6 ;
 $secondary:     #d5b6c5 ;
 $light:         #f1f1f1 ;
+$white:         white ;
 $dark:          #000000 ;
 $transparent:   transparent;
 $light-gray:    #adb1b4 ;
@@ -11,12 +12,33 @@ $gray-800: #343a40 !default;
 
 $background:  #fac7dc ;
 
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default; // text
+$gray-900: #212529;
+$black:    #000 !default;
+
 
 
 //Nabvar
 
 $navbar-padding-y:                  1.2rem !default;
 $navbar-padding-x:                  2.5rem !default;
+
+// Cards
+
+$card-spacer-x: 2rem;
+$card-border-radius: 40px;
+
+// Links
+
+$link-color: $gray-900;
 
 
 //then bootstrap & bootstrap-vue should be added after 

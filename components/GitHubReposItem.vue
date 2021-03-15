@@ -1,9 +1,9 @@
 <template>
   <div>
     <div v-for="repository in repositories" :key="repository.id">
-      <!-- <b-card :title="repository.name" sub-title="Card subtitle" class="m-2"> -->
-      <b-card class="m-2">
-        <b-card-title>
+      <a :href="repository.html_url" target="blank">
+        <b-card class="repos__card m-2">
+        <b-card-title class="mb-3">
           <svg viewBox="0 0 16 16" class="fill-current" aria-hidden="true">
             <path fill-rule="evenodd" :d="icon.book"></path>
           </svg>
@@ -41,7 +41,8 @@
               {{ repository.forks }}
             </b-card-text>
           </div>
-      </b-card>
+        </b-card>
+      </a>
     </div>
   </div>
 </template>
@@ -87,5 +88,15 @@ svg {
 
 .card-title {
   font-size: 18px;
+}
+
+.repos__card {
+  max-width: 356px;
+  min-width: 300px;
+
+  // fill-opacity: 70%;
+  // border: 1px;
+  // border-color: #FFFFFF;
+  // filter: blur(4px);
 }
 </style>

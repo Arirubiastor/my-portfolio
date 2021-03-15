@@ -1,19 +1,11 @@
 <template>
-  <b-container fluid class="p-0">
-    <b-row>
-      <b-col
+  <b-container fluid>
+      <div
         cols="8"
         class="section__container d-flex flex-column p-0"
         :key="index"
-        v-for="(project, index) in ProjectsData.slice(
-          (currentPage - 1) * perPage,
-          (currentPage - 1) * perPage + perPage
-        )"
+        v-for="(project, index) in ProjectsData"
       >
-        <div class="empty-space-section-content p-0">
-          <TheHeader />
-        </div>
-
         <a
           :href="project.siteUrl"
           target="blank"
@@ -34,52 +26,7 @@
             <b-card-text> </b-card-text>
           </b-card>
         </a>
-
-        <header class="mt-auto text-center">
-          <h2 class="title__section font-effect-outline text-lg mb-0">
-            Projects
-          </h2>
-        </header>
-      </b-col>
-
-      <b-col cols="4" class="pagination__container d-flex flex-column px-5">
-        <div class="empty-space p-0"></div>
-        <div class="elements__pagination d-flex flex-row w-100 mx-auto">
-          <h1
-            v-if="currentPage < 10"
-            class="current-page__pagination d-inline mr-auto nb-0"
-          >
-            0{{ currentPage }}
-          </h1>
-          <h1 v-else class="current-page__pagination d-inline mr-auto nb-0">
-            0{{ currentPage }}
-          </h1>
-          <h5 class="d-inline align-self-end pb-4">
-            /{{ ProjectsData.length }}
-          </h5>
-        </div>
-
-        <b-card
-          class="elements__pagination card_description align-self-center m-auto p-0"
-        >
-          <h5 class="text-center text-uppercase mb-4">Section Descrption</h5>
-          <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit iusto
-            a laboriosam nemo quo perferendis beatae autem. Facilis odio, ab
-            commodi doloribus repudiandae maxime quod distinctio, velit quam non
-            nulla?
-          </p>
-        </b-card>
-        <b-pagination
-          pills
-          :total-rows="ProjectsData.length"
-          :per-page="perPage"
-          v-model="currentPage"
-          class="align-self-center mt-auto my-0 mb-4"
-        >
-        </b-pagination>
-      </b-col>
-    </b-row>
+      </div>
   </b-container>
 </template>
 
