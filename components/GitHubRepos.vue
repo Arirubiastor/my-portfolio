@@ -1,7 +1,5 @@
 <template>
-  <div
-    v-if="repositoriesData && repositoriesData.length > 0"
-    class="mt-md-5">
+  <div v-if="repositoriesData && repositoriesData.length > 0" class="mt-md-5">
     <!-- <div
         v-for="repo in repositoriesData"
         :key="repo.id"
@@ -14,8 +12,25 @@
           :key="repo.id"
         />
       </div> -->
-      
-    <b-container>
+
+    <div class="marquee">
+      <ul class="marquee__content">
+        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
+
+        <!--  Repeated marquee items -->
+        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
+      </ul>
+    </div>
+
+    <b-container class="mt-md-5">
       <b-card-group columns class="">
         <GitHubReposItem
           :repositories="repositoriesData"
@@ -49,15 +64,14 @@ export default {
       loaded: false, // Prevent displaying component until data loaded
 
       items: this.repositoriesData,
-      paginatedItems: this.repositoriesData,
-      currentPage: 1,
-      perPage: 1,
+      githubTitle: 'github repositories',
     };
   },
 };
 </script>
 
 <style lang="scss">
+$text-global-color: #343a40; // gray-800
 
 // .repository__card,
 // .elements__pagination {
@@ -74,4 +88,33 @@ export default {
 //     font-size: 10rem;
 //   }
 // }
+
+.marquee {
+  width: 100%;
+  height: 80px;
+  border-top: 3px solid $text-global-color;
+  border-bottom: 3px solid $text-global-color;
+  overflow: hidden;
+}
+
+.marquee li {
+  font-size: 3rem;
+}
+
+.marquee__content {
+  display: flex;
+  list-style: none;
+  animation: scrolling 15s linear infinite;
+}
+
+.marquee__item {
+/*   height: 30px;
+  width: 60px; */
+  flex-shrink: 0;
+}
+
+@keyframes scrolling {
+  0% { transform: translateX(0) }
+  100% { transform: translateX(-100%) }
+}
 </style>
