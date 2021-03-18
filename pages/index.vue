@@ -14,6 +14,7 @@ Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
 
 export default {
+  layout: 'menu',
   components: {
     TheMenu,
   },

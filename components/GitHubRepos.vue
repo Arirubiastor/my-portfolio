@@ -1,5 +1,5 @@
 <template>
-  <div v-if="repositoriesData && repositoriesData.length > 0" class="mt-md-5">
+  <div v-if="repositoriesData && repositoriesData.length > 0" class="mt-0">
     <!-- <div
         v-for="repo in repositoriesData"
         :key="repo.id"

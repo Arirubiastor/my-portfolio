@@ -1,5 +1,23 @@
 <template>
-  <b-container fluid>
+  <div>
+    <div class="marquee">
+      <ul class="marquee__content">
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+
+        <!--  Repeated marquee items -->
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+      </ul>
+    </div>
+
+    <b-container fluid>
       <div
         cols="8"
         class="section__container d-flex flex-column p-0"
@@ -27,7 +45,8 @@
           </b-card>
         </a>
       </div>
-  </b-container>
+    </b-container>
+  </div>
 </template>
 
 <script>
@@ -35,9 +54,7 @@ export default {
   data() {
     return {
       items: this.ProjectsData,
-      paginatedItems: this.ProjectsData,
-      currentPage: 1,
-      perPage: 1,
+      sectionTitle: 'digital projects',
       ProjectsData: [
         {
           name: "Mertraco",
@@ -65,7 +82,8 @@ export default {
             "Bootstrap",
             "AWS",
           ],
-          imageUrl: "https://my-portfolio-storage-space.s3.amazonaws.com/exikhan-desktop.JPG",
+          imageUrl:
+            "https://my-portfolio-storage-space.s3.amazonaws.com/exikhan-desktop.JPG",
           siteUrl: "https://www.exikhan.com/",
         },
         {
@@ -78,28 +96,46 @@ export default {
             "Firebase",
             "Heroku",
           ],
-          imageUrl: "https://my-portfolio-storage-space.s3.amazonaws.com/outscape-desktop.JPG",
+          imageUrl:
+            "https://my-portfolio-storage-space.s3.amazonaws.com/outscape-desktop.JPG",
           siteUrl: "https://outscape-community.herokuapp.com/",
         },
         {
           name: "Customer Dashboard",
           description: "Head of the FrontEnd development and Web Design",
-          technologies: ["Vue.js", "Nuxt.js", "Storyblok","Leaflet", "CSS/SASS", "AWS"],
-          imageUrl: "https://my-portfolio-storage-space.s3.amazonaws.com/customer-dashboard-desktop.JPG",
-          siteUrl: "https://development.dd12vh11stjdb.amplifyapp.com/booking-details",
+          technologies: [
+            "Vue.js",
+            "Nuxt.js",
+            "Storyblok",
+            "Leaflet",
+            "CSS/SASS",
+            "AWS",
+          ],
+          imageUrl:
+            "https://my-portfolio-storage-space.s3.amazonaws.com/customer-dashboard-desktop.JPG",
+          siteUrl:
+            "https://development.dd12vh11stjdb.amplifyapp.com/booking-details",
         },
         {
           name: "Newsletter",
           description: "Head of the FrontEnd development and Web Design",
           technologies: ["Javasript", "Vanilla CSS", "Amazon S3"],
-          imageUrl: "https://my-portfolio-storage-space.s3.amazonaws.com/newsletter-desktop.png",
+          imageUrl:
+            "https://my-portfolio-storage-space.s3.amazonaws.com/newsletter-desktop.png",
           siteUrl: "https://tms.schryver.com/",
         },
         {
           name: "My Portfolio",
           description: "Head of the FrontEnd development and Web Design",
-          technologies: ["Nuxt", "REST APIs","Bootstrap/SASS", "Amazon S3", "AWS",],
-          imageUrl: "https://my-portfolio-storage-space.s3.amazonaws.com/my-portfolio-desktop.JPG",
+          technologies: [
+            "Nuxt",
+            "REST APIs",
+            "Bootstrap/SASS",
+            "Amazon S3",
+            "AWS",
+          ],
+          imageUrl:
+            "https://my-portfolio-storage-space.s3.amazonaws.com/my-portfolio-desktop.JPG",
           siteUrl: "https://www.arianarubi.com/",
         },
       ],

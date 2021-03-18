@@ -1,11 +1,12 @@
 <template>
   <div>
     <b-button
-      class="profile-sidebar__plus-button h5 mr-3 mb-0"
+      class="profile-sidebar__button h5 mr-3 mb-0"
       v-b-toggle.sidebar-1
       variant="light"
     >
-      <b-icon icon="plus"></b-icon>
+      <!-- <b-icon icon="plus"></b-icon> -->
+      ariana rubí
     </b-button>
     <b-sidebar class="profile-sidebar" id="sidebar-1" shadow width="30rem">
       <div class="test px-4 py-2 mt-2">
@@ -42,12 +43,14 @@ export default {
 </script>
 
 <style lang="scss">
-.profile-sidebar__plus-button {
+.profile-sidebar__button {
   background-color: white;
   border: none;
+  // font-size: 20px;
+  font-size: 1.3rem;
 }
 
-.profile-sidebar__plus-button {
+.profile-sidebar__button {
   background-color: white;
   border: none;
   &:hover {

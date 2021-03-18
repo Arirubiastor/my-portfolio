@@ -1,5 +1,5 @@
 <template>
-  <div v-if="posts && posts.length > 0" class="mt-md-5">
+  <div v-if="posts && posts.length > 0" class="mt-0">
 
     <div class="marquee">
       <ul class="marquee__content">

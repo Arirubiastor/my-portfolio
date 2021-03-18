@@ -1,11 +1,14 @@
 <template>
-  <div class="the-header border d-flex flex-column justify-content-center">
+  <div class="the-header border d-flex flex-column justify-content-center mx-4">
     <b-navbar toggleable="lg" variant="transparent">
       <TheProfileSidebar />
 
-      <b-navbar-brand to="/">ariana rubí</b-navbar-brand>
+      <b-nav class="d-flex flex-row justify-content-between">
+        <!-- <b-navbar-brand>ariana rubí</b-navbar-brand> -->
+        <b-nav-item to="/" class="mr-0">menu</b-nav-item>
+      </b-nav>
 
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <!-- <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
@@ -22,23 +25,8 @@
             >
             </b-icon>
         </b-navbar-nav>
-
-        <!-- <b-navbar-nav class="ml-auto">
-          <b-nav-form>
-            <b-form-input
-              size="sm"
-              class="mr-sm-2"
-              placeholder="Search"
-            ></b-form-input>
-            <b-button size="sm" class="my-2 my-sm-0" type="submit"
-              >Search</b-button
-            >
-          </b-nav-form>
-        </b-navbar-nav> -->
-      </b-collapse>
+      </b-collapse> -->
     </b-navbar>
-    <!-- <b-navbar-brand>Ariana Rubí</b-navbar-brand>
-    <h5>Frontend Developer &amp; Visual Artist</h5> -->
   </div>
 </template>
 
@@ -48,18 +36,30 @@ import TheProfileSidebar from "~/components/ProfileSidebar/TheProfileSidebar.vue
 export default {
   components: {
     TheProfileSidebar,
-  }
-
+  },
 };
 </script>
 
 <style lang="scss">
+$text-global-color: #343a40; // gray-800
+
 .the-header {
   height: 100%;
   margin-top: auto;
+  // border-bottom: 1px solid $text-global-color !important;
+  border-bottom: none !important;
+  border-top: none !important;
+  border-right: none !important;
+  border-left: none !important;
+
   h5 {
     font-size: 1rem;
     font-weight: 100;
   }
+}
+
+.navbar-expand-lg {
+    flex-flow: row nowrap;
+    justify-content: space-between;
 }
 </style>
