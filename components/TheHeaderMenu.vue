@@ -1,11 +1,12 @@
 <template>
-  <div class="the-header__menu border d-flex flex-column justify-content-center mx-4">
-    <b-navbar toggleable="lg" variant="transparent">
-      <TheProfileSidebar />
+  <div
+    class="the-header__menu border d-flex flex-column justify-content-center mx-4"
+  >
+    <b-navbar toggleable="lg" variant="transparent" class="pl-2 py-2">
+      <!-- <TheProfileSidebar /> -->
 
       <b-nav class="d-flex flex-row justify-content-between">
-        <!-- <b-navbar-brand>ariana rubí</b-navbar-brand> -->
-        <h6>Visual Artist and Frontend Developer</h6>
+        <b-navbar-brand class="my-name">ariana rubí</b-navbar-brand>
       </b-nav>
     </b-navbar>
   </div>
@@ -17,6 +18,10 @@ import TheProfileSidebar from "~/components/ProfileSidebar/TheProfileSidebar.vue
 export default {
   components: {
     TheProfileSidebar,
+  },
+  data() {
+    return {
+    };
   },
 };
 </script>
@@ -32,21 +37,21 @@ $text-global-color: #343a40; // gray-800
   border-right: none !important;
   border-left: none !important;
 
-  h5 {
-    font-size: 1rem;
-    font-weight: 100;
-  }
-  h6 {
-      font-size: 1rem;
-      margin-bottom: 0;
-      text-transform: uppercase;
-        font-style: italic;
-        font-weight: 400;
+  .my-name {
+    font-size: 1.2rem;
+    font-family: 'Roboto Mono', monospace;
   }
 }
 
 .navbar-expand-lg {
-    flex-flow: row nowrap;
-    justify-content: space-between;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+// sm
+@media (min-width: 576px) {
+  .my-name {
+    font-size: 1.5rem !important;
+  }
 }
 </style>
