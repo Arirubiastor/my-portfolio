@@ -1,13 +1,19 @@
 <template>
-  <div class="the-header ml-5 d-flex flex-column justify-content-center">
-    <!-- <b-navbar toggleable="lg" variant="transparent">
-      <b-navbar-brand href="#">Ariana Rubí</b-navbar-brand>
+  <div class="the-header border d-flex flex-column justify-content-center">
+    <b-navbar toggleable="lg" variant="transparent">
+      <TheProfileSidebar />
+
+      <b-navbar-brand to="/">ariana rubí</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
-        <b-navbar-nav>
-          <b-nav-item href="#">
+        <b-navbar-nav class="ml-auto">
+          <b-nav-item to="/digital-products">
+            digital products
+          </b-nav-item>
+          <b-nav-item>blog</b-nav-item>
+          <b-nav-item to="/artwork">artwork</b-nav-item>
             <b-icon
               icon="grip-horizontal"
               variant="dark"
@@ -15,11 +21,9 @@
               class="d-inline"
             >
             </b-icon>
-            Projects</b-nav-item
-          >
         </b-navbar-nav>
 
-        <b-navbar-nav class="ml-auto">
+        <!-- <b-navbar-nav class="ml-auto">
           <b-nav-form>
             <b-form-input
               size="sm"
@@ -30,16 +34,21 @@
               >Search</b-button
             >
           </b-nav-form>
-        </b-navbar-nav>
+        </b-navbar-nav> -->
       </b-collapse>
-    </b-navbar> -->
-    <b-navbar-brand>Ariana Rubí</b-navbar-brand>
-    <h5>Frontend Developer &amp; Visual Artist</h5>
+    </b-navbar>
+    <!-- <b-navbar-brand>Ariana Rubí</b-navbar-brand>
+    <h5>Frontend Developer &amp; Visual Artist</h5> -->
   </div>
 </template>
 
 <script>
+import TheProfileSidebar from "~/components/ProfileSidebar/TheProfileSidebar.vue";
+
 export default {
+  components: {
+    TheProfileSidebar,
+  }
 
 };
 </script>
