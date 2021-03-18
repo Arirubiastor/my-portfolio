@@ -1,14 +1,17 @@
 <template>
   <div>
-    <!-- <TheHeader /> -->
+    <TheHeader />
     <Nuxt />
   </div>
 </template>
 
-<style>
+<style lang="scss">
+$text-global-color: #343a40; // gray-800
+
 html {
   font-family:
-    'Source Sans Pro',
+    'Montserrat',
+    /* 'Source Sans Pro', */
     -apple-system,
     BlinkMacSystemFont,
     'Segoe UI',
@@ -24,6 +27,12 @@ html {
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   
+}
+
+body {
+  /* background-color: rgb(175, 240, 218); */
+  font-family: 'Montserrat';
+  color: $text-global-color;
 }
 
 *,
