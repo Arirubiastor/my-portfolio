@@ -15,18 +15,18 @@
 
     <div class="marquee">
       <ul class="marquee__content">
-        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
-        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
-        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
-        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
-        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
-        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
 
         <!--  Repeated marquee items -->
-        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
-        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
-        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
-        <li class="marquee__item">&nbsp;{{ githubTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
+        <li class="marquee__item">&nbsp;{{ sectionTitle }} &bull;</li>
       </ul>
     </div>
 
@@ -64,7 +64,7 @@ export default {
       loaded: false, // Prevent displaying component until data loaded
 
       items: this.repositoriesData,
-      githubTitle: 'github repositories',
+      sectionTitle: 'github repositories',
     };
   },
 };
@@ -99,6 +99,7 @@ $text-global-color: #343a40; // gray-800
 
 .marquee li {
   font-size: 3rem;
+  text-transform: uppercase;
 }
 
 .marquee__content {

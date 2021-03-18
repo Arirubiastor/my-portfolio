@@ -149,9 +149,9 @@ export default {
   border-top: 1.5px gray solid !important;
 }
 
-.tab-content {
-  border-right: 1.5px gray solid;
-}
+// .tab-content {
+//   border-right: 1.5px gray solid;
+// }
 
 .tab-title {
   border-top: 1.5px gray solid;
