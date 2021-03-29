@@ -30,7 +30,7 @@ html {
 }
 
 body {
-//   background-color: rgb(175, 240, 218);
+  // background-color: rgb(175, 240, 218);
   font-family: 'Montserrat';
   color: $text-global-color;
 }
