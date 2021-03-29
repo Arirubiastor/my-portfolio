@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <div class="contact__list d-flex flex-column">
+    <div class="contact__list d-flex flex-column justify-content-center h-100">
       <!-- <a :href="contact.email" target="blank" class="inline-block">e-mail</a> -->
       <a href="mailto:arianarubigo@gmail.com" target="blank" class="inline-block">e-mail</a>
       <a :href="contact.linkedinUrl" target="blank" class="d-inline"
@@ -11,8 +10,11 @@
       >
       <a :href="contact.githubUrl" target="blank" class="d-inline">github</a>
       <a :href="contact.mediumUrl" target="blank" class="d-inline">medium</a>
+      <div>
+        <a :href="contact.codepenUrl" target="blank" class="d-inline">codepen</a>
+      </div>
+      
     </div>
-  </div>
 </template>
 
 <script>
@@ -31,6 +33,7 @@ export default {
         githubUrl: "https://github.com/arirubiastor",
         mediumUser: "arianarubi.medium.com",
         mediumUrl: "https://arianarubi.medium.com/",
+        codepenUrl: "https://codepen.io/arianarubi",
       },
     };
   },
@@ -40,6 +43,7 @@ export default {
 <style lang="scss">
 .contact__list {
   text-decoration: none;
+  height: 100%;
   a {
     font-size: 3.3rem;
   }
@@ -48,7 +52,7 @@ export default {
 @media (min-width: 768px) {
   .contact__list {
     a {
-      font-size: 5rem;
+      font-size: 3rem;
     }
   }
 }

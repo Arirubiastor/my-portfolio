@@ -2,13 +2,13 @@
   <div>
     <b-button
       class="profile-sidebar__button h5 mr-3 mb-0"
-      v-b-toggle.sidebar-1
-      variant="light"
+      v-b-toggle.sidebar-backdrop
+      variant="white"
     >
       <!-- <b-icon icon="plus"></b-icon> -->
       ariana rubí
     </b-button>
-    <b-sidebar class="profile-sidebar" id="sidebar-1" shadow width="30rem">
+    <b-sidebar class="profile-sidebar" id="sidebar-backdrop" shadow width="30rem" title="" :backdrop-variant="variant" backdrop sidebar-class="border-right border-dark">
       <div class="test px-4 py-2 mt-2">
         <b-tabs content-class="mt-3 mt-md-4 px-1">
           <b-tab title="biography" active>
@@ -39,15 +39,23 @@ export default {
     Contact,
     Skills,
   },
+  data() {
+    return {
+      variant: 'transparent',
+    }
+  }
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoope>
 .profile-sidebar__button {
-  background-color: white;
+  background-color: transparent !important;
   border: none;
   // font-size: 20px;
   font-size: 1.3rem;
+  // box-shadow: 0 0 0 0.2rem rgb(210 210 211 / 50%);
+  box-shadow: none !important;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .profile-sidebar__button {
@@ -60,14 +68,17 @@ export default {
   &:active {
     background-color: white;
     border: none;
+    box-shadow: none !important;
   }
   &:focus {
     background-color: white;
     border: none;
+    box-shadow: none !important;
   }
   &:visited {
     background-color: white;
     border: none;
+    box-shadow: none !important;
   }
 }
 
@@ -88,6 +99,11 @@ export default {
 
 .close {
   padding-top: 6px;
+  box-shadow: none !important;
+}
+
+.shadow {
+  box-shadow: none !important;
 }
 
 .nav-tabs {
