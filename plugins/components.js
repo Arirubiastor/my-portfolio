@@ -1,9 +1,7 @@
 import Vue from 'vue'
 import TheHeader from '~/components/TheHeader/TheHeader.vue'
 import InstagramMedia from '~/components/InstagramMedia.vue'
-import MainCatalogue from '~/components/MainCatalogue.vue'
 import Profile from '~/components/Profile.vue'
-import Pagination from '~/components/Pagination.vue'
 import Projects from '~/components/Projects.vue'
 import TheHeaderMenu from '~/components/TheHeader/TheHeaderMenu.vue'
 

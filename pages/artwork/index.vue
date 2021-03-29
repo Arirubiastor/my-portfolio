@@ -1,15 +1,12 @@
 <template>
   <div>
     <MainCatalogue :images="projectsData" />
-    <Pagination :images="projectsData" />
-    
-    <!-- <GitHubRepos :repositoriesData="repos" :bgColorsData="colors" /> -->
-    <!-- {{ projectsData }} -->
+    <ArtworkCataloge :images="projectsData" />
   </div>
 </template>
 
 <script>
-import MainCatalogue from "~/components/MainCatalogue.vue";
+import ArtworkCataloge from "~/components/ArtworkCataloge.vue";
 
 import Vue from "vue";
 import { BootstrapVue, BootstrapVueIcons } from "bootstrap-vue";
@@ -20,7 +17,7 @@ Vue.use(BootstrapVueIcons);
 export default {
   layout: 'artwork',
   components: {
-    MainCatalogue,
+    ArtworkCataloge,
   },
   data() {
     return {
