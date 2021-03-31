@@ -4,7 +4,7 @@
       fixed="top"
       toggleable="lg"
       variant="transparent"
-      class="px-3 px-md-5"
+      class="navbar-global px-1 px-sm-2 px-md-5"
     >
       <TheProfileSidebar />
 
@@ -26,33 +26,43 @@
         >
           <div class="artwork-sidebar__content px-3 py-2">
             <div class="artwork-sidebar__header-conatiner">
-              <b-button class="artwork-sidebar__close-button mr-4" v-b-toggle.sidebar-backdrop-1 variant="white">
+              <b-button
+                class="artwork-sidebar__close-button mr-4"
+                v-b-toggle.sidebar-backdrop-1
+                variant="white"
+              >
                 <b-icon icon="x" class="mb-1"></b-icon>
               </b-button>
               <h5>statement</h5>
             </div>
             <div class="artwork-sidebar__text-conatiner">
               <p>
-              Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-              dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-              ac consectetur ac, vestibulum at eros. Cras mattis consectetur
-              purus sit amet fermentum. Cras justo odio, dapibus ac facilisis
-              in, egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-              vestibulum at eros. Cras mattis consectetur purus sit amet
-              fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget
-              quam. Morbi leo risus, porta ac consectetur ac, vestibulum at
-              eros. Cras mattis consectetur purus sit amet fermentum. Cras justo
-              odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus,
-              porta ac consectetur ac, vestibulum at eros. Cras mattis
-              consectetur purus sit amet fermentum. Cras justo odio, dapibus ac
-              facilisis in, egestas eget quam. Morbi leo risus, porta ac
-              consectetur ac, vestibulum at eros. Cras mattis consectetur purus
-              sit amet fermentum. Cras justo odio, dapibus ac facilisis in,
-              egestas eget quam. Morbi leo risus, porta ac consectetur ac,
-              vestibulum at eros.
-            </p>
+                Through the selection, transformation and manipulation of
+                textile and pictorial materials, my work explores the
+                fundamental components of the Universe, energy, matter and
+                space-time; delving into the analysis of the behavior and
+                properties of light and its interactions with matter.
+              </p>
+              <p>
+                By experimenting with these concepts I compile works that encompass
+                different formats, colors, and textures, while combining
+                different techniques such as: hand embroidery, machine
+                embroidery, photographic transfer on fabric, textile
+                pigmentation, and watercolor.
+              </p>
+              <p>
+                As a result of long and detailed production processes, my works manage to transform themselves
+                depending on the distance from where they are observed, up close
+                it is possible to distinguish the sharpness and detail of
+                stitches, colors and textures, and as the view moves away, these
+                merge and combine in conclusive forms. In this way I have
+                managed to create textile pieces that explore my interest in the
+                study of physics, nature and optics; and that in turn activate a
+                conscious dialogue towards the understanding of the
+                possibilities of reality and our perception of it.
+              </p>
             </div>
-            
+
             <!-- <b-img
               src="https://picsum.photos/500/500/?image=54"
               fluid
@@ -149,9 +159,23 @@ $text-global-color: #343a40;
       margin-top: 1.8rem;
       p {
         line-height: 2;
-        font-size: .9rem;
+        font-size: 0.9rem;
       }
     }
+  }
+}
+
+.navbar-global {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid $text-global-color;
+}
+
+//md
+@media (min-width: 768px) {
+  .navbar-global {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
 }
 </style>

@@ -75,9 +75,13 @@
           <p class="cataloge__index-numerator">0{{ currentPage }}</p>
           <p class="cataloge__index-denominator">/0{{ images.length }}</p>
         </div> -->
-        <div class="cataloge__data-sheet">
+        <div class="cataloge__data-sheet" v-for="(item, index) in images" :key="index">
           <ul>
-            <li>Título, año</li>
+            <!-- <li>Título, año</li>
+            <li>Material</li>
+            <li>Medidas en inches</li>
+            <li>Medidas en cm</li> -->
+            <li>{{ item.title }}, {{ item.year }}</li>
             <li>Material</li>
             <li>Medidas en inches</li>
             <li>Medidas en cm</li>
@@ -163,14 +167,14 @@ export default {
 $gray-800: #343a40 !default; // text
 
 .cataloge__container {
-  margin-top: 82px;
+  margin-top: 60px;
   .cataloge__flex-conatiner {
     // vanilla flex
     // display: flex;
     // justify-content: center;
     // align-items: center;
     //
-    height: calc(100vh - 82px);
+    height: calc(100vh - 60px);
   }
   .cataloge__image-container {
     height: 65%;
@@ -180,7 +184,7 @@ $gray-800: #343a40 !default; // text
     justify-content: center;
     align-items: center;
     .catalogue__image {
-      width: 1000px;
+      // width: 1000px;
     }
   }
   .cataloge__pagination-container {
@@ -227,9 +231,10 @@ $gray-800: #343a40 !default; // text
   height: 32%;
 }
 
+// md
 @media (min-width: 768px) {
   .cataloge__container {
-    // height: calc(100vh -82px);
+    margin-top: 82px;
   }
 
   .cataloge__flex-conatiner {

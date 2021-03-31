@@ -2,7 +2,7 @@
   <div
     class="the-header__menu border d-flex flex-column justify-content-center mx-4"
   >
-    <b-navbar toggleable="lg" variant="transparent" class="pl-2 py-2">
+    <b-navbar toggleable="lg" variant="transparent" class="pl-0 py-2">
       <!-- <TheProfileSidebar /> -->
 
       <b-nav class="d-flex flex-row justify-content-between">
@@ -19,6 +19,7 @@ export default {
   components: {
     TheProfileSidebar,
   },
+
   data() {
     return {
     };
@@ -38,7 +39,7 @@ $text-global-color: #343a40; // gray-800
   border-left: none !important;
 
   .my-name {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-family: 'Roboto Mono', monospace;
   }
 }
@@ -51,7 +52,7 @@ $text-global-color: #343a40; // gray-800
 // sm
 @media (min-width: 576px) {
   .my-name {
-    font-size: 1.5rem !important;
+    font-size: 1.3rem !important;
   }
 }
 </style>

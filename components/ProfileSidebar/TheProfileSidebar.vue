@@ -51,8 +51,7 @@ export default {
 .profile-sidebar__button {
   background-color: transparent !important;
   border: none;
-  // font-size: 20px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   // box-shadow: 0 0 0 0.2rem rgb(210 210 211 / 50%);
   box-shadow: none !important;
   font-family: 'Roboto Mono', monospace;
@@ -117,6 +116,10 @@ export default {
 @media (min-width: 768px) {
   .b-sidebar-header {
   margin-left: 380px;
+}
+
+.profile-sidebar__button {
+  font-size: 1.2rem;
 }
 }
 </style>

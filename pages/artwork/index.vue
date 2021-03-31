@@ -22,42 +22,26 @@ export default {
   data() {
     return {
       projectsData: [
+        // {
+        //   title: "Self-portrait",
+        //   year: "2017",
+        //   imageUrl:
+        //     "https://my-portfolio-storage-space.s3.amazonaws.com/artwork-cataloge/IMG_6343.JPG",
+        //   instaUrl: "https://www.instagram.com/ariana.rubii/",
+        // },
         {
-          name: "Mertraco Company's Website Redesign",
+          title: "Duality",
+          year: "2018",
           imageUrl:
-            "https://my-portfolio-storage-space.s3.amazonaws.com/mertraco-desktop.JPG",
-          siteUrl: "https://www.mertraco.com/",
+            "https://my-portfolio-storage-space.s3.amazonaws.com/artwork-cataloge/DSC_0175.JPG",
+          instaUrl: "https://www.instagram.com/ariana.rubii/",
         },
         {
-          name: "Exikhan Company's Website",
+          title: "Saltponds",
+          year: "2019",
           imageUrl:
-            "https://my-portfolio-storage-space.s3.amazonaws.com/exikhan-desktop.JPG",
-          siteUrl: "https://www.exikhan.com/",
-        },
-        {
-          name: "Outscape Map Collaboration Web Application",
-          imageUrl:
-            "https://my-portfolio-storage-space.s3.amazonaws.com/outscape-desktop.JPG",
-          siteUrl: "https://outscape-community.herokuapp.com/",
-        },
-        {
-          name: "Track and Trace Web application",
-          imageUrl:
-            "https://my-portfolio-storage-space.s3.amazonaws.com/customer-dashboard-desktop.JPG",
-          siteUrl:
-            "https://development.dd12vh11stjdb.amplifyapp.com/booking-details",
-        },
-        {
-          name: "Newsletter for an ERP",
-          imageUrl:
-            "https://my-portfolio-storage-space.s3.amazonaws.com/newsletter-desktop.png",
-          siteUrl: "https://tms.schryver.com/",
-        },
-        {
-          name: "My Portfolio Web Site",
-          imageUrl:
-            "https://my-portfolio-storage-space.s3.amazonaws.com/my-portfolio-desktop.JPG",
-          siteUrl: "https://www.arianarubi.com/",
+            "https://my-portfolio-storage-space.s3.amazonaws.com/artwork-cataloge/IMG_6590.JPG",
+          instaUrl: "https://www.instagram.com/ariana.rubii/",
         },
       ],
     };

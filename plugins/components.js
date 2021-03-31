@@ -7,7 +7,6 @@ import TheHeaderMenu from '~/components/TheHeader/TheHeaderMenu.vue'
 
 Vue.component('the-header', TheHeader)
 Vue.component('instagram-media', InstagramMedia)
-Vue.component('main-catalogue', MainCatalogue)
 Vue.component('profile', Profile)
 Vue.component('pagination', Pagination)
 Vue.component('projects', Projects)

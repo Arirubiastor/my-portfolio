@@ -126,7 +126,7 @@ $text-global-color: #343a40; // gray-800
 
 .marquee__menu {
   width: 100vw;
-  height: 40px;
+  height: 27px;
   border-top: 2px solid $text-global-color;
   border-bottom: 2px solid $text-global-color;
   overflow: hidden;
@@ -137,7 +137,7 @@ $text-global-color: #343a40; // gray-800
     animation: scrolling 4s linear infinite;
 
     .marquee__item {
-      font-size: 1.5rem;
+      font-size: 1rem;
       text-transform: uppercase;
       /*   height: 30px;
       width: 60px; */
@@ -171,7 +171,7 @@ $text-global-color: #343a40; // gray-800
   }
 
   .marquee__content {
-    animation: scrolling 8s linear infinite !important;
+    animation: scrolling 10s linear infinite !important;
   }
 
   @keyframes scrolling {
@@ -200,6 +200,15 @@ $text-global-color: #343a40; // gray-800
 
   .nav-item__icon {
     width: 4rem;
+  }
+
+  .marquee__menu {
+  height: 35px;
+  .marquee__content {
+    .marquee__item {
+      font-size: 1.3rem;
+    }
+  }
   }
 }
 

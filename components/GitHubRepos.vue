@@ -30,7 +30,7 @@
       </ul>
     </div>
 
-    <b-container class="mt-md-5">
+    <b-container class="mt-4 mt-md-5">
       <b-card-group columns class="">
         <GitHubReposItem
           :repositories="repositoriesData"
@@ -64,7 +64,7 @@ export default {
       loaded: false, // Prevent displaying component until data loaded
 
       items: this.repositoriesData,
-      sectionTitle: 'github repositories',
+      sectionTitle: "github repositories",
     };
   },
 };
@@ -91,31 +91,57 @@ $text-global-color: #343a40; // gray-800
 
 .marquee {
   width: 100%;
-  height: 80px;
+  height: 40px;
   border-top: 3px solid $text-global-color;
   border-bottom: 3px solid $text-global-color;
   overflow: hidden;
+  margin-top: 56px;
 }
 
-.marquee li {
-  font-size: 3rem;
+.marquee__item {
+  font-size: 1.5rem;
   text-transform: uppercase;
+  flex-shrink: 0;
 }
 
 .marquee__content {
   display: flex;
   list-style: none;
-  animation: scrolling 15s linear infinite;
-}
-
-.marquee__item {
-/*   height: 30px;
-  width: 60px; */
-  flex-shrink: 0;
+  animation: scrolling 8s linear infinite;
 }
 
 @keyframes scrolling {
-  0% { transform: translateX(0) }
-  100% { transform: translateX(-100%) }
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+// md
+@media (min-width: 768px) {
+  .marquee {
+    margin-top: 82px;
+    height: 52px;
+    .marquee__item {
+      font-size: 2rem;
+    }
+  }
+  .marquee__content {
+    animation: scrolling 12s linear infinite;
+  }
+}
+
+//lg
+@media (min-width: 960px) {
+  .marquee {
+    height: 80px;
+    .marquee__item {
+      font-size: 3rem;
+    }
+  }
+  .marquee__content {
+    animation: scrolling 15s linear infinite;
+  }
 }
 </style>
