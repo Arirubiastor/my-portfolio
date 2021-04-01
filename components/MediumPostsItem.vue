@@ -1,14 +1,15 @@
 <template>
   <div>
-    <a :href="post.link" target="blank" v-for="(post, index) in posts" :key="index" class="post__card align-self-center m-auto">
-      <b-card :img-src="post.thumbnail" img-alt="Post Image" img-top>
-        <!-- <b-card-image :src="post.thumbnail"> </b-card-image> -->
+    <a :href="post.link" target="blank" v-for="(post, index) in posts" :key="index" class="post__card-link align-self-center m-auto">
+      <b-card class="post__card" :img-src="post.thumbnail" img-alt="Post Image" img-top no-body>
+        <b-card-body class="post__card-body p-3 p-md-4">
+          <!-- <b-card-image :src="post.thumbnail"> </b-card-image> -->
         <b-card-sub-title class="post__date mt-1">
           <!-- {{ post.author }} -->
           {{ post.pubDate.split(' ')[0] }}
         </b-card-sub-title>
         <b-card-title class="post__title mt-3">
-          {{ post.title }}
+          {{ post.title }} Photo by Ivan Slade on Unsplash
         </b-card-title>
         <b-card-text class="mt-3">
           <!-- <p v-html="post.description" v-if="post.description.length > 50 ? post.description : post.description.substring(0, 50) + '...'"></p> -->
@@ -19,6 +20,7 @@
             </b-badge>
           </div>
         </b-card-text>
+        </b-card-body>
       </b-card>
     </a>
   </div>
@@ -48,13 +50,16 @@ figure {
 }
 
 $gray-800: #343a40 !default; // text
+.post__card-body {
 
-.post__card {
+}
+
+.post__card-link {
   width: 15rem;
   max-width: 40rem;
   color: $gray-800;
 }
-.post__card:hover {
+.post__card-link:hover {
   text-decoration: none;
   color: $gray-800;
 }
@@ -64,6 +69,10 @@ $gray-800: #343a40 !default; // text
   // font-weight: 900;
   font-family: 'Inter', 'Source Sans Pro';
   // font-family: 'Bungee Hairline', 'Source Sans Pro';
+}
+
+.post__card {
+  min-width: 290px;
 }
 
 .post__date {
@@ -80,5 +89,17 @@ $gray-800: #343a40 !default; // text
 
 .post__categorie {
   background-color: white;
+  font-size: 0.65rem;
+}
+
+@media (min-width: 576px) {
+  .post__categorie {
+    font-size: 0.75rem;
+  }
+  .card-columns {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+    }
 }
 </style>

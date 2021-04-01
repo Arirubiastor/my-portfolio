@@ -32,6 +32,11 @@
       <b-card-group columns class="pt-0 mx-md-5">
         <MediumPostsItem :posts="posts"> </MediumPostsItem>
       </b-card-group>
+      <!-- <b-row>
+        <b-col v-for="(post, index) in posts" :key="index" cols="1" md="3">
+          <MediumPostsItem :posts="posts"> </MediumPostsItem>
+        </b-col>
+      </b-row> -->
     </b-container>
   </div>
 </template>
@@ -83,6 +88,20 @@ $text-global-color: #343a40; // gray-800
 }
 }
 
+.card-columns {
+    -webkit-column-count: 1;
+    -moz-column-count: 1;
+    column-count: 1;
+  }
+
+@media (min-width: 660px) {
+  .card-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+
 @media (min-width: 768px) {
   .section-description__container {
     font-size: 1.1rem;
@@ -90,6 +109,28 @@ $text-global-color: #343a40; // gray-800
     margin-left: 3.5rem;
     margin-right: 3.5rem;
   }
+
+  .card-columns {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1140px) {
+  .card-columns {
+    -webkit-column-count: 3;
+    -moz-column-count: 3;
+    column-count: 3;
+    }
+}
+
+@media (min-width: 1370px) {
+  .card-columns {
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+    }
 }
 
 
