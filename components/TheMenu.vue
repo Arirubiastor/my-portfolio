@@ -1,7 +1,8 @@
 <template>
 <div class="page__container d-flex flex-column">
   <div class="nav__container d-flex flex-column justify-content-center">
-    <div class="nav-item__container mx-4 pl-1 pr-1 py-3">
+
+    <!-- <div class="nav-item__container mx-4 pl-1 pr-1 py-3">
       <nuxt-link to="/artwork">artwork</nuxt-link>
       <div>
         <img
@@ -10,37 +11,59 @@
           class="nav-item__icon"
         />
       </div>
-    </div>
-    <div class="nav-item__container mx-4 pl-1 py-3">
-      <nuxt-link to="/github-repositories">repositories</nuxt-link>
-      <div>
-        <img
-          src="~assets/icons/next-128px.png"
-          alt="A black arrow pointing to the right"
-          class="nav-item__icon"
-        />
+    </div> -->
+    <nuxt-link to="/artwork">
+      <div class="nav-item__container mx-4 pl-1 pr-1 py-3">
+        artwork
+        <div>
+          <img
+            src="~assets/icons/next-128px.png"
+            alt="A black arrow pointing to the right"
+            class="nav-item__icon"
+          />
+        </div>
       </div>
-    </div>
-    <div class="nav-item__container mx-4 pl-1 py-3">
-      <nuxt-link to="/digital-products">projects</nuxt-link>
-      <div>
-        <img
-          src="~assets/icons/next-128px.png"
-          alt="A black arrow pointing to the right"
-          class="nav-item__icon"
-        />
+    </nuxt-link>
+
+    <nuxt-link to="/github-repositories">
+      <div class="nav-item__container mx-4 pl-1 py-3">
+        repositories
+        <div>
+          <img
+            src="~assets/icons/next-128px.png"
+            alt="A black arrow pointing to the right"
+            class="nav-item__icon"
+          />
+        </div>
       </div>
-    </div>
-    <div class="nav-item-bottom__container mx-4 pl-1 py-3">
-      <nuxt-link to="/blog">blog</nuxt-link>
-      <div>
-        <img
-          src="~assets/icons/next-128px.png"
-          alt="A black arrow pointing to the right"
-          class="nav-item__icon"
-        />
+    </nuxt-link>
+
+    <nuxt-link to="/digital-products">
+      <div class="nav-item__container mx-4 pl-1 py-3">
+        projects
+        <div>
+          <img
+            src="~assets/icons/next-128px.png"
+            alt="A black arrow pointing to the right"
+            class="nav-item__icon"
+          />
+        </div>
       </div>
-    </div>
+    </nuxt-link>
+    
+    <nuxt-link to="/blog">
+      <div class="nav-item-bottom__container mx-4 pl-1 py-3">
+        blog
+        <div>
+          <img
+            src="~assets/icons/next-128px.png"
+            alt="A black arrow pointing to the right"
+            class="nav-item__icon"
+          />
+        </div>
+      </div>
+    </nuxt-link>
+
   </div>
     <div class="marquee__menu mt-auto">
       <ul class="marquee__content">
