@@ -3,11 +3,11 @@
     class="the-header__menu border d-flex flex-column justify-content-center mx-4"
   >
     <b-navbar toggleable="lg" variant="transparent" class="pl-0 py-2">
-      <!-- <TheProfileSidebar /> -->
+      <TheProfileSidebar />
 
-      <b-nav class="d-flex flex-row justify-content-between">
+      <!-- <b-nav class="d-flex flex-row justify-content-between">
         <b-navbar-brand class="my-name">ariana rubí</b-navbar-brand>
-      </b-nav>
+      </b-nav> -->
     </b-navbar>
   </div>
 </template>

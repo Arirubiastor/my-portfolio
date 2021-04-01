@@ -1,6 +1,6 @@
 <template>
   <div class="the-header border d-flex flex-column justify-content-center">
-    <b-navbar fixed="top" toggleable="lg" variant="transparent" class="navbar-global px-2 px-sm-3 px-md-5">
+    <b-navbar fixed="top" toggleable="lg" variant="transparent" class="navbar-global px-2 pr-sm-3 px-md-5">
       <TheProfileSidebar />
 
       <b-nav class="d-flex flex-row justify-content-between">
@@ -66,6 +66,7 @@ $text-global-color: #343a40; // gray-800
 .navbar-global {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  padding-left: 1.2rem !important;
   // border-bottom: 1px solid red;
 }
 

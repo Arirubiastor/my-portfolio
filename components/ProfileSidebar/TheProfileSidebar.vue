@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-button
-      class="profile-sidebar__button h5 mr-3 mb-0"
+      class="profile-sidebar__button h5 mr-3 mb-0 pl-1"
       v-b-toggle.sidebar-backdrop
       variant="white"
     >
@@ -55,6 +55,7 @@ export default {
   // box-shadow: 0 0 0 0.2rem rgb(210 210 211 / 50%);
   box-shadow: none !important;
   font-family: 'Roboto Mono', monospace;
+  // margin-left: 0 !important;
 }
 
 .profile-sidebar__button {
