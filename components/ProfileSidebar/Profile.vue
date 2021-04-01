@@ -39,7 +39,7 @@ export default {
   data() {
     return {
       education: {
-        title: "Education",
+        title: "education",
         school: "Universidad de las Américas Puebla",
         degree: "Bachelor of Fine Arts",
         date: "2012-2016",
@@ -75,7 +75,7 @@ export default {
     text-decoration: none;
   }
   h6 {
-    font-weight: 500;
+    font-weight: 600;
     color: black !important;
   }
   ul {

@@ -10,7 +10,9 @@
     </b-button>
     <b-sidebar class="profile-sidebar" id="sidebar-backdrop" shadow width="30rem" title="" :backdrop-variant="variant" backdrop sidebar-class="border-right border-dark">
       <div class="test px-4 py-2 mt-2">
-        <b-tabs content-class="mt-3 mt-md-4 px-1">
+        <b-tabs
+          content-class="mt-3 mt-md-4 px-1"
+          active-nav-item-class="font-weight-bold">
           <b-tab title="biography" active>
             <Profile />
           </b-tab>
