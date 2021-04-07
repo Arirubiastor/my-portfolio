@@ -9,7 +9,7 @@
           {{ post.pubDate.split(' ')[0] }}
         </b-card-sub-title>
         <b-card-title class="post__title mt-3">
-          {{ post.title }} Photo by Ivan Slade on Unsplash
+          {{ post.title }}
         </b-card-title>
         <b-card-text class="mt-3">
           <!-- <p v-html="post.description" v-if="post.description.length > 50 ? post.description : post.description.substring(0, 50) + '...'"></p> -->
