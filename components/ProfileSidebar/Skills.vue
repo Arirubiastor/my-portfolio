@@ -1,8 +1,8 @@
 <template>
   <div>
-    <b-card-group deck :key="id" v-for="(skill, id) in skills" class="px-2">
+    <b-card-group deck :key="id" v-for="(skill, id) in skills" class="skills__container px-0 px-md-2">
       <b-card no-body class="border-0 m-2 mb-3">
-        <b-card-title>
+        <b-card-title class="skills__title">
           {{ skill.name }}
         </b-card-title>
         <b-card-text>
@@ -10,7 +10,7 @@
             variant="white"
             :key="badgeId"
             v-for="(item, badgeId) in skill.details"
-            class="p-2 m-2"
+            class="skills__badge p-2 mr-2 mb-2 mr-md-3 mb-md-3"
             >{{ item }}</b-badge
           >
         </b-card-text>
@@ -69,9 +69,28 @@ export default {
 </script>
 
 <style lang="scss">
+$text-global-color: #343a40;
+
 .badge {
   font-weight: 500;
   border: 0.5px solid gray;
   border-radius: 40px;
+}
+
+.skills__title {
+  font-size: 1rem;
+}
+
+.skills__badge:hover {
+  background-color: $text-global-color;
+  color: white;
+  border-color: $text-global-color;
+  padding: 5rem;
+}
+
+@media (min-width: 768px) {
+.skills__title {
+  font-size: 1.2rem; // 24px
+}
 }
 </style>

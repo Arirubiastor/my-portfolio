@@ -27,7 +27,7 @@
           <div class="artwork-sidebar__content px-3 py-2">
             <div class="artwork-sidebar__header-conatiner">
               <b-button
-                class="artwork-sidebar__close-button mr-4"
+                class="artwork-sidebar__close-button mr-3"
                 v-b-toggle.sidebar-backdrop-1
                 variant="white"
               >
@@ -118,6 +118,8 @@ $text-global-color: #343a40;
 .artwork-sidebar__close-button {
   background-color: white;
   border: none;
+  padding-left: 8px;
+
   &:hover {
     background-color: white;
     border: none;

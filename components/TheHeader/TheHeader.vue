@@ -75,6 +75,7 @@ $text-global-color: #343a40; // gray-800
   .navbar-global {
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
+    padding-left: 2.5rem !important;
 }
 }
 </style>
