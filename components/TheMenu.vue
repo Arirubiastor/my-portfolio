@@ -128,6 +128,7 @@ $text-global-color: #343a40; // gray-800
 }
 
 .nav-item__container {
+  font-family: 'Montserrat';
   font-size: 1.9rem;
   border-bottom: 3px solid $text-global-color;
   font-weight: 500;
@@ -136,6 +137,7 @@ $text-global-color: #343a40; // gray-800
 }
 
 .nav-item-bottom__container {
+  font-family: 'Montserrat';
   font-size: 1.9rem;
   color: $text-global-color;
   font-weight: 500;

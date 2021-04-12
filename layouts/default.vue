@@ -10,8 +10,7 @@ $text-global-color: #343a40; // gray-800
 
 html {
   font-family:
-    'Montserrat',
-    /* 'Source Sans Pro', */
+    'Mulish', sans-serif,
     -apple-system,
     BlinkMacSystemFont,
     'Segoe UI',
@@ -31,7 +30,7 @@ html {
 
 body {
   /* background-color: rgb(175, 240, 218); */
-  font-family: 'Montserrat';
+  font-family: 'Mulish', sans-serif;
   color: $text-global-color;
 }
 
