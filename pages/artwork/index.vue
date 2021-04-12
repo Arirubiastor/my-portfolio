@@ -22,16 +22,22 @@ export default {
   data() {
     return {
       projectsData: [
-        // {
-        //   title: "Self-portrait",
-        //   year: "2017",
-        //   imageUrl:
-        //     "https://my-portfolio-storage-space.s3.amazonaws.com/artwork-cataloge/IMG_6343.JPG",
-        //   instaUrl: "https://www.instagram.com/ariana.rubii/",
-        // },
+        {
+          title: "Self-portrait",
+          year: "2017",
+          medium: "bordado sobre tela montado en bastidor de madera",
+          measuresCm: "40cm x 60cm x 5cm",
+          measuresIn: "15in x 27in x 1.5in",
+          imageUrl:
+            "https://my-portfolio-storage-space.s3.amazonaws.com/artwork-cataloge/IMG_6343.JPG",
+          instaUrl: "https://www.instagram.com/ariana.rubii/",
+        },
         {
           title: "Duality",
           year: "2018",
+          medium: "bordado sobre tela montado en bastidor de madera",
+          measuresCm: "40cm x 60cm x 5cm",
+          measuresIn: "15in x 27in x 1.5in",
           imageUrl:
             "https://my-portfolio-storage-space.s3.amazonaws.com/artwork-cataloge/DSC_0175.JPG",
           instaUrl: "https://www.instagram.com/ariana.rubii/",
@@ -39,6 +45,9 @@ export default {
         {
           title: "Saltponds",
           year: "2019",
+           medium: "acrílico y tierra sobre tela montado en bastidor de madera",
+          measuresCm: "70cm x 160cm x 5cm",
+          measuresIn: "45in x 79in x 1.5in",
           imageUrl:
             "https://my-portfolio-storage-space.s3.amazonaws.com/artwork-cataloge/IMG_6590.JPG",
           instaUrl: "https://www.instagram.com/ariana.rubii/",
